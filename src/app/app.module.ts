@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PanelModule } from './dashboard/panel/panel.module';
 import { AppRoutingModule } from './app-routing.module';
+import { CursosModule } from './cursos/cursos.module';
+import { LoginModule } from './login/login.module';
 
 
 
@@ -18,7 +20,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     PanelModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CursosModule,
+    LoginModule
     
   ],
   providers: [],

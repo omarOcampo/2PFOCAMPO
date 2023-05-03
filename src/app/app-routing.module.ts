@@ -1,28 +1,17 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PanelComponent } from './dashboard/panel/panel.component';
-import { AlumnosComponent } from './alumnos/alumnos.component';
-import { AlumnoDetalleComponent } from './alumnos/pages/alumno-detalle/alumno-detalle.component';
 import { LoginComponent } from './login/login.component';
+import { LoginGuard } from './login/guard/login.guard';
+
+
 
 const routes: Routes = [
   {
     path: 'dashboard',
+    canActivate:[LoginGuard],
     component: PanelComponent,
-    children: [
-      {
-        path: 'alumnos',
-        children: [{
-          path: '',
-          component:AlumnosComponent,
-        },
-      {
-        path: ':id',
-        component: AlumnoDetalleComponent,
-      }
-      ]
-      }
-    ]
+     loadChildren:() => import ('./dashboard/panel/panel.module').then((m) => m.PanelModule) 
   },
   {
     path: 'login',

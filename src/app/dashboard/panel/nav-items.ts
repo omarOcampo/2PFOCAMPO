@@ -8,17 +8,15 @@ const links: NavItem [] = [
     {
         path: 'alumnos',
         title: 'Alumnos',
+        icon: 'person'
     },
 
     {
-        path: 'curso',
+        path: 'cursos',
         title: 'Cursos',
+        icon: 'school'
     },
 
-    {
-        path: 'inscripciones',
-        title: 'Inscripciones',
-    }
 ]
 
 export default links;

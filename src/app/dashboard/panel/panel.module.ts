@@ -10,6 +10,9 @@ import { DirectivasModule } from '../../shared/directivas/directivas.module';
 import { AlumnosComponent } from '../../alumnos/alumnos.component';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { CursosComponent } from 'src/app/cursos/cursos.component';
+import { AlumnoDetalleComponent } from 'src/app/alumnos/pages/alumno-detalle/alumno-detalle.component';
+import { CursoDetallesComponent } from 'src/app/cursos/pages/curso-detalles/curso-detalles.component';
 
 
 
@@ -28,7 +31,31 @@ MatSidenavModule
     AlumnosModule,
     DirectivasModule,
     MatListModule,
-    RouterModule
+    RouterModule.forChild([
+      {
+        path: 'alumnos',
+        children: [{
+          path: '',
+          component:AlumnosComponent,
+        },
+      {
+        path: ':id',
+        component: AlumnoDetalleComponent, 
+      }    
+    ]
+      },
+      {
+        path: 'cursos',
+        children: [{
+          path:'',
+          component: CursosComponent
+        },
+      {
+        path: ':id',
+        component: CursoDetallesComponent,
+      }]
+      }
+    ])
     
   ],
   exports: [

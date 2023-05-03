@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { AlumnosServiciosService } from '../core/servicios/alumnos-servicios.service';
 import { Observable } from 'rxjs';
-import { TimeService, Time } from '../core/servicios/time.service';
+import { TimeService} from '../core/servicios/time.service';
 import { Router } from '@angular/router';
 
 
