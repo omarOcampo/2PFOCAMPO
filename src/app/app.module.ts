@@ -6,6 +6,7 @@ import { PanelModule } from './dashboard/panel/panel.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CursosModule } from './cursos/cursos.module';
 import { LoginModule } from './login/login.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -22,7 +23,8 @@ import { LoginModule } from './login/login.module';
     PanelModule,
     AppRoutingModule,
     CursosModule,
-    LoginModule
+    LoginModule,
+    HttpClientModule,
     
   ],
   providers: [],

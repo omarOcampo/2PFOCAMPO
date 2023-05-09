@@ -14,7 +14,7 @@ export class LoginGuard implements CanActivate {
     
       const isLogged = false;
       
-    return   this.loginService.obtenerUsuarioAutenticado()
+    return   this.loginService.verificarToken()
       .pipe(
         map((usuarioAutenticado) => { 
          if(!usuarioAutenticado){
